@@ -18,12 +18,12 @@
   var video = document.getElementById('video');
   if(Hls.isSupported()) {
     var hls = new Hls();
-    hls.loadSource('https://stream.mqhtv.cloud/hls/tv_kabel.m3u8');
+    hls.loadSource('https://iptv-org.github.io/iptv/countries/id.m3u');
     hls.attachMedia(video);
     video.play();
   }
   else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://stream.mqhtv.cloud/hls/tv_kabel.m3u8';
+    video.src = 'https://iptv-org.github.io/iptv/countries/id.m3u';
     video.addEventListener('loadedmetadata',function() {
       video.play();
     });
