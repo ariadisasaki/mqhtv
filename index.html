@@ -18,12 +18,12 @@
   var video = document.getElementById('video');
   if(Hls.isSupported()) {
     var hls = new Hls();
-    hls.loadSource('https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1739798115/ei/A-KyZ6uvI66I3LUP4ruXiQE/ip/125.164.37.18/id/DOOrIxw5xOw.21/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maxh/4320/maudio/1/siu/1/bui/AUWDL3x00NK0b2Kc4ZjzhywRLrNsQxYCARXLhGGMuwxoV0duElXbf4i3yjMZ3rp5Rler9O_X0Q/spc/RjZbSY5W8PCP4ym69jMpqJsoysn1Y258m4KG0ESiTPVaeqb-_IcgT0CVfTBg3Dzk9A/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/fexp/51326932%2C51355912/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaxh%2Cmaudio%2Csiu%2Cbui%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhALjIXIfBBXakKnOpT7Q7WYJ3yy_mKGwIm_TSjNCOL989AiB-wgp3nUty0qDVkEeX2oCz_V0dcXzNB9Q6SsfY_zjTog%3D%3D/file/index.m3u8');
+    hls.loadSource('https://stream.mqhtv.cloud/hls/tv_kabel.m3u8');
     hls.attachMedia(video);
     video.play();
   }
   else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1739798115/ei/A-KyZ6uvI66I3LUP4ruXiQE/ip/125.164.37.18/id/DOOrIxw5xOw.21/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/30/manifest_duration/30/maxh/4320/maudio/1/siu/1/bui/AUWDL3x00NK0b2Kc4ZjzhywRLrNsQxYCARXLhGGMuwxoV0duElXbf4i3yjMZ3rp5Rler9O_X0Q/spc/RjZbSY5W8PCP4ym69jMpqJsoysn1Y258m4KG0ESiTPVaeqb-_IcgT0CVfTBg3Dzk9A/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/keepalive/yes/fexp/51326932%2C51355912/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaxh%2Cmaudio%2Csiu%2Cbui%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhALjIXIfBBXakKnOpT7Q7WYJ3yy_mKGwIm_TSjNCOL989AiB-wgp3nUty0qDVkEeX2oCz_V0dcXzNB9Q6SsfY_zjTog%3D%3D/file/index.m3u8';
+    video.src = 'https://stream.mqhtv.cloud/hls/tv_kabel.m3u8';
     video.addEventListener('loadedmetadata',function() {
       video.play();
     });
